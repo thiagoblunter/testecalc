@@ -232,9 +232,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				var f = (ap_1 * Probabilidade1 - valor).toFixed(2);
 				var f2 = (ap_2 * Probabilidade2 - valor).toFixed(2);
 				var f3 = (ap_3 * Probabilidade3 - valor).toFixed(2);
-				document.getElementById("lucro").innerHTML = f + "$";
-				document.getElementById("lucro2").innerHTML = f2 + "$";
-				document.getElementById("lucro3").innerHTML = f3 + "$";
+	
+				// Verifica se o lucro é negativo e adiciona a mensagem correspondente
+				if (f < 0) {
+					document.getElementById("lucro").innerHTML = "Não há surebet";
+				} else {
+					document.getElementById("lucro").innerHTML = f + "$";
+				}
+	
+				if (f2 < 0) {
+					document.getElementById("lucro2").innerHTML = "Não há surebet";
+				} else {
+					document.getElementById("lucro2").innerHTML = f2 + "$";
+				}
+	
+				if (f3 < 0) {
+					document.getElementById("lucro3").innerHTML = "Não há surebet";
+				} else {
+					document.getElementById("lucro3").innerHTML = f3 + "$";
+				}
 			} else {
 				var Probabilidade1 = Number(document.getElementById("Probabilidade1").value);
 				var Probabilidade2 = Number(document.getElementById("Probabilidade2").value);
@@ -249,8 +265,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				var ap_2 = Number(aposta2);
 				var f = (ap_1 * Probabilidade1 - valor).toFixed(2);
 				var f2 = (ap_2 * Probabilidade2 - valor).toFixed(2);
-				document.getElementById("lucro").innerHTML = f + "$";
-				document.getElementById("lucro2").innerHTML = f2 + "$";
+	
+				// Verifica se o lucro é negativo e adiciona a mensagem correspondente
+				if (f < 0) {
+					document.getElementById("lucro").innerHTML = "Não há surebet";
+				} else {
+					document.getElementById("lucro").innerHTML = f + "$";
+				}
+	
+				if (f2 < 0) {
+					document.getElementById("lucro2").innerHTML = "Não há surebet";
+				} else {
+					document.getElementById("lucro2").innerHTML = f2 + "$";
+				}
+	
+				// Como não há "lucro3" quando aposta3 é falso, você pode removê-lo ou adicionar uma verificação similar se necessário.
 			}
 		}
 	</script>
